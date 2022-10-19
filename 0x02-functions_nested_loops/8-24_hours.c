@@ -2,21 +2,26 @@
 /**
  * jack_bauer - prints 00:00 to 23:59 of the day
  *
+ *Return: prints
  */
 void jack_bauer(void)
 {
-	int hour, minutes;
+	int x = 0;
+	int j = 0;
 
-	for (hour = 0; hour <= 23; hour++)
+	while (x <= 23)
 	{
-		for (minute = 0; minute <= 59; minute++)
+		j = 0;
+		while (j <= 59)
 		{
-			_putchar((hour / 10) + '0');
-			_putchar((hour % 10) + '0');
+			_putchar(x / 10 + '0');
+			_putchar(x % 10 + '0');
 			_putchar(':');
-			_putchar((minute / 10) + '0');
-			_putchar((minute % 10) + '0');
+			_putchar((j / 10) + '0');
+			_putchar((j % 10) + '0');
 			_putchar('\n');
+			j += 1;
 		}
+		x += 1;
 	}
 }
