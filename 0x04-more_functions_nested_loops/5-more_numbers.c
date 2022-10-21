@@ -14,7 +14,7 @@ void more_numbers(void)
 	{
 		char *s = "01234567891011121314";
 
-		for (j = 0; j <= 14; j++)
+		for (j = 0; j <= 19; j++)
 			_putchar(s[j]);
 		_putchar('\n');
 		i++;
