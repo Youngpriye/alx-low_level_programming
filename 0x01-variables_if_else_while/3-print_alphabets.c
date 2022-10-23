@@ -13,15 +13,15 @@ int main(void)
 
 	c = 'a';
 	d = 'A';
-	while
-		(c <= 'Z') {
-			puthcar(c);
-			c++;
-		}
-	while 
-		(d <=  'z') {
-			putcher(c);
-			d++;
-		}
-	putchar('\n')
+
+	for (c = 'a'; c <= 'Z'; c++)
+	{
+		putchar(c);
+	}
+	for (d = 'A'; d <= 'Z'; d++)
+	{
+		putchar(c);
+	}
+	putchar('\n');
 	return (0);
+}
