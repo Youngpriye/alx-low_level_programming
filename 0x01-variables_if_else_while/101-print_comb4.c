@@ -6,28 +6,29 @@
 
 int main(void)
 {
-	int x;
-	int i;
-	int h;
+	int c, i, k;
 
-	for (h = 0 ; h != 8 ; h++)
+	for (c = '0'; c <= '9'; c++)
 	{
-		for (x = h + 1 ; x != 9 ; x++)
+		for (i = '0'; i <= '9'; i++)
 		{
-			i = x + 1;
-			do {
-				putchar('0' + h);
-				putchar('0' + x);
-				putchar('0' + x);
-				if (h != 7)
+			for (k = '0'; k <= '9'; k++)
+			{
+				if (c < i && i < k)
 				{
-					putchar(',');
-					putchar(32);
+					putchar (c);
+					putchar (i);
+					putchar (k);
+
+					if (c != '7')
+					{
+						putchar (',');
+						putchar (' ');
+					}
 				}
-				i++;
-			} while (i != 10);
+			}
 		}
 	}
-	putchar('\n');
+	putchar ('\n');
 	return (0);
 }
