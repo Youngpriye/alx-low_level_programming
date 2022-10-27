@@ -6,25 +6,18 @@
  */
 void print_number(int n)
 {
-	unsigned int y;
+	unsigned int y1;
 
-	if (n < 10 && n >= 0)
-	{
-		_putchar('0' + n);
-		return;
-	}
+	y1 = n;
+
 	if (n < 0)
 	{
-		y = -n;
 		_putchar('-');
+		y1 = -n;
 	}
-	else
+	if (y1 / 10 != 0)
 	{
-		y = n;
+		print_number(y1 / 10);
 	}
-	if (y >= 10)
-	{
-		print_number(y / 10);
-	}
-	_putchar('0' + (y % 10));
+	_putchar((y1 % 10) + '0');
 }
