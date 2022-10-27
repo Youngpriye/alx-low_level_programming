@@ -7,18 +7,18 @@
  */
 char *cap_string(char *s)
 {
-	int x, i;
+	int i, j;
+	char delimeters[] = " \t\n,;.!?\"(){}";
 
-	x = 1;
-	i = 0;
-	while (s[i] != '\0')
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (x == 1 && (s[i] >= 'a' && s[i] <= 'z'))
-		{
-			s[i] -= 32;
-			x = 0;
-		}
-		i++;
+		if (s[0] >= 97 && s[0] <= 122)
+			s[0] = s[0] - 32;
+	}
+	for (j = 0; delimeters[j] != '\0'; j++)
+	{
+		if (s[i] == delimeters[j] && s[i + 1] >= 97 && s[i + 1] <= 122)
+			s[i + 1] = s[i + 1] - 32;
 	}
 	return (s);
 }
