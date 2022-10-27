@@ -1,9 +1,5 @@
 #include <stdio.h>
 
-/**
- * main - magic program
- * Return: void
- */
 int main(void)
 {
 	int n;
@@ -17,6 +13,7 @@ int main(void)
 	 * Remember: the following
 	 * - you are not allowed to modify p
 	 * - you are not allowed to use a
+	 *   only one statement
 	 * - you are not allowed to code anything else than this line of code
 	 */
 	p[5] = 98;
