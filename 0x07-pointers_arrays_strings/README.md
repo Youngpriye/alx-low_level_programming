@@ -1,1 +1,1 @@
-even more pionters, arrays and string files
+Mor arrays and strings files in c
