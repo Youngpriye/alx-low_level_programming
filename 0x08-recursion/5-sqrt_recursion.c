@@ -17,6 +17,7 @@ int power_operation(int n, int c)
 	}
 	return (0 + power_operation(n, c + 1));
 }
+
 /**
  * _sqrt_recursion - find the square root of a given number
  * @n: input number
